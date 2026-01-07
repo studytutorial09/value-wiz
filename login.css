@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+    --color-primary: #1a1a1a;
+    --color-secondary: #646cff;
+    --color-accent: #535bf2;
+    --color-muted: #888;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+@layer components {
+    .btn-primary {
+        border-radius: calc(infinity * 1px);
+        background-color: #6E7271;
+        padding-inline: --spacing(5);
+        padding-block: --spacing(2);
+        font-weight: var(--font-weight-semibold);
+        color: var(--color-white);
+        box-shadow: var(--shadow-md);
+
+        &:hover {
+            @media (hover: hover) {
+                background-color: var(#548075);
+            }
+        }
+    }
+}
